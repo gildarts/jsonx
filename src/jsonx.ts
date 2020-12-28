@@ -27,10 +27,10 @@ export class Jsonx implements Iterable<Jsonx> {
      */
     public get text() {
         this.checkNotArray();
-        return (this.data as xj.ElementCompact)._text;
+        return (this.data as xj.ElementCompact)._text + '';
     }
 
-    public set text(val: string | number) {
+    public set text(val: string) {
         this.checkNotArray();
         (this.data as xj.ElementCompact)._text = val;
     }
@@ -53,7 +53,7 @@ export class Jsonx implements Iterable<Jsonx> {
         this.checkNotArray();
 
         const { _attributes = {} } = this.data as xj.ElementCompact;
-        return _attributes[name];
+        return _attributes[name] + '';
     }
 
     /** 設定屬性文字內容。 */
