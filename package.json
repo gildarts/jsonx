@@ -1,6 +1,6 @@
 {
   "name": "@1campus/jsonx",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "json <=> xml parser",
   "main": "jsonx.js",
   "scripts": {
