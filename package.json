@@ -1,0 +1,25 @@
+{
+  "name": "@1campus/jsonx",
+  "version": "0.0.1",
+  "description": "json <=> xml parser",
+  "main": "jsonx.js",
+  "scripts": {
+    "deploy": "npm publish --access=public"
+  },
+  "author": "Yaoming Huang",
+  "license": "ISC",
+  "dependencies": {
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.3",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "ts-loader": "^4.4.2",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
