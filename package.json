@@ -1,9 +1,10 @@
 {
   "name": "@1campus/jsonx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "json <=> xml parser",
   "main": "jsonx.js",
   "scripts": {
+    "build": "yarn webpack",
     "deploy": "npm publish --access=public"
   },
   "author": "Yaoming Huang",
