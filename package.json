@@ -2,7 +2,7 @@
   "name": "@1campus/jsonx",
   "version": "0.0.5",
   "description": "json <=> xml parser",
-  "main": "jsonx.js",
+  "main": "jsonx.node.js",
   "scripts": {
     "build": "yarn webpack",
     "deploy": "npm publish --access=public"

@@ -17,14 +17,29 @@ fs.readdirSync('node_modules')
         nodeModules[mod] = 'commonjs ' + mod;
     });
 
-module.exports = {
-    entry: './index.ts', // 程式進入點。
+const nodeOutput = {
     output: { //輸出位置。
         path: path.resolve(__dirname, 'dist'),
-        filename: 'jsonx.js',
+        filename: '[name].node.js',
         libraryTarget: 'commonjs'
     },
     target: 'node', // 讓 webpack 以 node 方式處理內鍵 lib，例如：fs, path ...
+};
+
+const webOutput = {
+    output: { //輸出位置。
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].web.js',
+        libraryTarget: 'commonjs'
+    },
+    target: 'web', // 讓 webpack 以 node 方式處理內鍵 lib，例如：fs, path ...
+};
+
+const base = {
+    entry: {
+        jsonx: './index.ts',
+        main: './main.ts'
+    }, // 程式進入點。
     context: __dirname,
     node: {
         __filename: false,
@@ -111,3 +126,5 @@ module.exports = {
         // new WriteFilePlugin()
     ],
 };
+
+module.exports = [{ ...base, ...nodeOutput }, { ...base, ...webOutput }];
